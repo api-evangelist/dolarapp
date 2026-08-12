@@ -1,0 +1,15 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.arqfinance.com/sitemap-0.xml
+plan_count: 0
+plans: []
+note: >-
+  DolarApp/ARQ publishes no API plans or developer pricing because it runs no public
+  developer program. The crawlable site map carries no /pricing, /plans, /fees or
+  /developers path in any locale; consumer and business fee schedules are distributed
+  inside the apps, the Intercom help centres and the legal PDFs at cdn.dolarapp.com
+  rather than as a public pricing page. This is a recorded absence, not an unchecked field.
+evidence:
+- {url: 'https://www.arqfinance.com/sitemap-0.xml', http_status: 200, note: no pricing/plans/fees path in any locale}
+- {url: 'https://www.arqfinance.com/en-MX/business', http_status: 200, note: no pricing section}
+- {url: 'https://help-business.arqfinance.com/en', http_status: 200, note: help centre collections only}

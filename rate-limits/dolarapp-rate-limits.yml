@@ -1,0 +1,16 @@
+generated: '2026-08-12'
+method: probed
+source: live probe of https://api.dolarapp.com/ and https://status.dolarapp.com/api/v2/
+limit_count: 0
+rate_limits: []
+headers_observed: []
+note: >-
+  No rate limits are published because no public API reference exists. The private
+  application host api.dolarapp.com rejects every anonymous request with HTTP 403 and
+  returns no RateLimit-*, X-RateLimit-* or Retry-After header on that response (only
+  x-correlation-id, HSTS, X-Frame-Options: DENY and no-store cache directives). The
+  public Atlassian Statuspage JSON endpoints return no rate-limit headers either. Honest
+  zero: checked, nothing published and nothing signalled at runtime.
+evidence:
+- {url: 'https://api.dolarapp.com/', http_status: 403, note: 'response headers carry no rate-limit signal'}
+- {url: 'https://status.dolarapp.com/api/v2/status.json', http_status: 200, note: 'no RateLimit-* headers'}

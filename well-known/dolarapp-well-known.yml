@@ -1,0 +1,79 @@
+generated: '2026-08-12'
+method: probed
+source: live GET of /.well-known/* on every DolarApp / ARQ host
+note: >-
+  DolarApp (ARQ) serves NO first-party /.well-known document. Every path 404s on the
+  marketing host www.arqfinance.com and 403s on the private API host api.dolarapp.com.
+  The two 200s recorded below are VENDOR-served documents on vendor-operated subdomains —
+  Atlassian Statuspage on status.dolarapp.com and Intercom on help.arqfinance.com — and
+  both carry a Canonical: pointing back at the vendor's own domain, so neither is
+  DolarApp's security policy. business.arqfinance.com is a single-page app whose catch-all
+  answers HTTP 200 with an HTML shell for every path, including /.well-known/*; those are
+  recorded as false positives, not documents. No WellKnown or SecurityTxt pointer is
+  emitted from this probe.
+hosts:
+- host: www.arqfinance.com
+  role: marketing site
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: api.dolarapp.com
+  role: private application API host (anonymous requests rejected)
+  documents:
+  - {path: /.well-known/security.txt, status: 403}
+  - {path: /.well-known/openid-configuration, status: 403}
+  - {path: /.well-known/oauth-authorization-server, status: 403}
+  - {path: /.well-known/api-catalog, status: 403}
+  - {path: /.well-known/ai-plugin.json, status: 403}
+  - {path: /.well-known/agent-card.json, status: 403}
+  - {path: /.well-known/agent.json, status: 403}
+- host: status.dolarapp.com
+  role: Atlassian Statuspage (vendor-operated)
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    first_party: false
+    note: >-
+      Atlassian's own signed security.txt — Contact security@atlassian.com,
+      Canonical https://www.atlassian.com/.well-known/security.txt. Not DolarApp's.
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: help.arqfinance.com
+  role: Intercom help center (vendor-operated)
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    first_party: false
+    note: >-
+      Intercom's security.txt — Contact security@intercom.com / bugcrowd.com/intercom,
+      Canonical https://app.intercom.com/.well-known/security.txt. Not DolarApp's.
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: business.arqfinance.com
+  role: business web app (SPA catch-all — every path returns 200 HTML)
+  soft_200: true
+  documents:
+  - {path: /.well-known/security.txt, status: 200, document: false, note: HTML SPA shell}
+  - {path: /.well-known/openid-configuration, status: 200, document: false, note: HTML SPA shell}
+  - {path: /.well-known/oauth-authorization-server, status: 200, document: false, note: HTML SPA shell}
+  - {path: /.well-known/api-catalog, status: 200, document: false, note: HTML SPA shell}
+  - {path: /.well-known/ai-plugin.json, status: 200, document: false, note: HTML SPA shell}
+  - {path: /.well-known/agent-card.json, status: 200, document: false, note: HTML SPA shell}
+  - {path: /.well-known/agent.json, status: 200, document: false, note: HTML SPA shell}
+summary:
+  first_party_documents: 0
+  vendor_documents: 2
+  soft_200_false_positives: 7

@@ -1,0 +1,16 @@
+generated: '2026-08-12'
+method: searched
+source: registry lookups + github.com/dolarapp + arqfinance.com
+package_count: 0
+packages: []
+registries_checked:
+- {registry: npm, queries: [dolarapp, arqfinance, '@dolarapp/sdk', '@arqfinance/sdk'], result: 404, version: null}
+- {registry: pypi, queries: [dolarapp, arqfinance], result: 404, version: null}
+- {registry: github, queries: [github.com/dolarapp], result: 'org exists, 0 public repositories', version: null}
+- {registry: github, queries: [github.com/arqfinance, github.com/arq-finance], result: 404, version: null}
+note: >-
+  No first-party client library exists in any public registry. The GitHub organization
+  github.com/dolarapp is real and its profile links to www.dolarapp.com, but it publishes
+  zero public repositories. DolarApp/ARQ ships consumer iOS/Android apps and a business
+  web app; there is no SDK to catalogue, so no SDKs pointer is emitted. version/published
+  are recorded null for every query because nothing was published to query.

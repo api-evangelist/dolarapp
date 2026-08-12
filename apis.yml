@@ -1,8 +1,17 @@
 aid: dolarapp
 name: DolarApp
-description: 'DolarApp is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'DolarApp — rebranded to ARQ in March 2026 — is a Latin American cross-border
+  fintech founded in Mexico in 2022 by former Revolut operators Fernando Terres, Zach
+  Garman and Alvaro Correa. It gives consumers and businesses in Mexico, Argentina,
+  Colombia and Brazil digital dollar (USDc) and euro (EURc) accounts, US ACH/wire receiving
+  details, international cards accepted in 180+ countries, interbank-rate FX conversion,
+  bulk supplier and contractor payouts, corporate cards with spend controls, and investment
+  and credit products. It reports roughly two million users and is backed by Sequoia
+  Capital, Founders Fund, Brevan Howard Digital, Y Combinator and Kaszek. DolarApp/ARQ
+  runs a private API host at api.dolarapp.com for its own mobile and web applications
+  but publishes no public developer program, documentation or machine-readable specification.'
 url: https://raw.githubusercontent.com/api-evangelist/dolarapp/refs/heads/main/apis.yml
+image: https://www.arqfinance.com/og-image-en.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,12 +21,97 @@ created: '2026-08-12'
 modified: '2026-08-12'
 tags:
 - Company
-apis: []
+- Fintech
+- Payments
+- Cross-Border Payments
+- Banking
+- Digital Dollars
+- Stablecoins
+- Foreign Exchange
+- Corporate Cards
+- Latin America
+apis:
+- name: DolarApp Status API
+  description: 'Public, unauthenticated Atlassian Statuspage v2 JSON API served on DolarApp''s
+    own status host. Exposes overall status, the ten monitored components (sign up,
+    sign in, website, and card payments / bank transfers per country for AR, MX, CO
+    and US), open incidents and scheduled maintenances. This is the only machine-readable
+    HTTP surface DolarApp/ARQ publishes anonymously; it is vendor-provided rather than
+    a first-party developer API.'
+  humanURL: https://status.dolarapp.com/
+  baseURL: https://status.dolarapp.com/api/v2
+  tags:
+  - Status
+  - Monitoring
+  - Uptime
+  properties:
+  - type: StatusPage
+    url: https://status.dolarapp.com/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/dolarapp-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.arqfinance.com/
+- type: Blog
+  url: https://www.arqfinance.com/en-MX/blog
+- type: Support
+  url: https://help.arqfinance.com/en
+- type: HelpCenter
+  url: https://help-business.arqfinance.com/en
+- type: SignUp
+  url: https://business.arqfinance.com/sign-up
+- type: Login
+  url: https://business.arqfinance.com/sign-in
+- type: TermsOfService
+  url: https://www.arqfinance.com/en-MX/legal
+- type: PrivacyPolicy
+  url: https://www.arqfinance.com/en-MX/legal/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/dolarapp
+- type: StatusPage
+  url: https://status.dolarapp.com/
+- type: Security
+  url: https://www.arqfinance.com/en-MX/responsible-disclosure-policy
+- type: VulnerabilityDisclosure
+  url: security/dolarapp-vulnerability-disclosure.yml
+- type: Lifecycle
+  url: lifecycle/dolarapp-lifecycle.yml
+- type: LLMsTxt
+  url: llms/dolarapp-llms.txt
+- type: Packages
+  url: packages/dolarapp-packages.yml
+- type: Plans
+  url: plans/dolarapp-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/dolarapp-rate-limits.yml
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    DolarApp (rebranded ARQ) runs api.dolarapp.com purely as the backend for its own
+    mobile and business apps — it answers every anonymous request, including
+    /openapi.json and /.well-known/*, with HTTP 403 — and the crawlable site map carries
+    no /developers, /docs or /api path in any of its twelve locales, so there is no
+    public developer program to profile.
+  evidence:
+  - url: https://api.dolarapp.com/openapi.json
+    status: 403
+  - url: https://www.arqfinance.com/sitemap-0.xml
+    status: 200
+  - url: https://docs.arqfinance.com/
+    status: 0
+  - url: https://www.dolarapp.com/llms.txt
+    status: 404
+  - url: https://www.arqfinance.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-12'

@@ -1,0 +1,45 @@
+generated: '2026-08-12'
+method: probed
+source: https://status.dolarapp.com/
+status_page: https://status.dolarapp.com/
+status_page_platform: Atlassian Statuspage
+status_page_machine_readable:
+  summary: https://status.dolarapp.com/api/v2/summary.json
+  status: https://status.dolarapp.com/api/v2/status.json
+  components: https://status.dolarapp.com/api/v2/components.json
+  incidents: https://status.dolarapp.com/api/v2/incidents.json
+  scheduled_maintenances: https://status.dolarapp.com/api/v2/scheduled-maintenances.json
+  atom: https://status.dolarapp.com/history.atom
+  rss: https://status.dolarapp.com/history.rss
+status_components:
+- {name: Sign Up, status: operational}
+- {name: Sign In, status: operational}
+- {name: Website, status: operational}
+- {name: AR card payments, status: operational}
+- {name: AR bank transfers, status: operational}
+- {name: MX card payments, status: operational}
+- {name: MX bank transfers, status: operational}
+- {name: CO bank transfers, status: operational}
+- {name: CO card payments, status: operational}
+- {name: US bank transfers, status: operational}
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  note: >-
+    No public API versioning policy is published — DolarApp/ARQ runs no public developer
+    program. The status page is still branded "DolarApp" after the March 2026 rebrand to
+    ARQ, so the product name and the status host have diverged.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No deprecation or sunset policy published; no Deprecation pointer emitted.
+sla:
+  url: null
+  uptime_target: null
+deprecated_operations: []
+evidence:
+- {url: 'https://status.dolarapp.com/', http_status: 200, fetched: '2026-08-12'}
+- {url: 'https://status.dolarapp.com/api/v2/status.json', http_status: 200, fetched: '2026-08-12'}
+- {url: 'https://status.dolarapp.com/api/v2/components.json', http_status: 200, fetched: '2026-08-12'}
+- {url: 'https://status.arqfinance.com/', http_status: 0, fetched: '2026-08-12', note: DNS does not resolve}

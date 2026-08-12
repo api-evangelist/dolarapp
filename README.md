@@ -42,5 +42,18 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-DolarApp is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+DolarApp — rebranded to **ARQ** in March 2026 — is a Latin American cross-border fintech founded in
+Mexico in 2022 by former Revolut operators. It provides digital dollar (USDc) and euro (EURc)
+accounts, US ACH/wire receiving details, international cards, interbank-rate FX, bulk payouts and
+corporate cards to consumers and businesses in Mexico, Argentina, Colombia and Brazil.
+
+**No public developer program.** `api.dolarapp.com` is a private application backend that answers
+every anonymous request — including `/openapi.json` and `/.well-known/*` — with HTTP 403. No docs
+host resolves, and the site map carries no `/developers`, `/docs` or `/api` path in any locale. The
+only anonymous machine-readable surface is the Atlassian Statuspage v2 JSON at
+`https://status.dolarapp.com/api/v2/`.
+
+- Website: https://www.arqfinance.com/
+- Business: https://www.arqfinance.com/en-MX/business
+- Status: https://status.dolarapp.com/
+- Responsible disclosure: https://www.arqfinance.com/en-MX/responsible-disclosure-policy
