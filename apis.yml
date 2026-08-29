@@ -11,6 +11,17 @@ description: 'DolarApp — rebranded to ARQ in March 2026 — is a Latin America
   runs a private API host at api.dolarapp.com for its own mobile and web applications
   but publishes no public developer program, documentation or machine-readable specification.'
 url: https://raw.githubusercontent.com/api-evangelist/dolarapp/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.arqfinance.com/og-image-en.png
 x-type: company
 x-source: harvest:secondary-market
