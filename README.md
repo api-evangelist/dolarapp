@@ -64,18 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-DolarApp — rebranded to **ARQ** in March 2026 — is a Latin American cross-border fintech founded in
-Mexico in 2022 by former Revolut operators. It provides digital dollar (USDc) and euro (EURc)
-accounts, US ACH/wire receiving details, international cards, interbank-rate FX, bulk payouts and
-corporate cards to consumers and businesses in Mexico, Argentina, Colombia and Brazil.
+DolarApp — rebranded to ARQ in March 2026 — is a Latin American cross-border fintech founded in Mexico in 2022 by former Revolut operators Fernando Terres, Zach Garman and Alvaro Correa. It gives consumers and businesses in Mexico, Argentina, Colombia and Brazil digital dollar (USDc) and euro (EURc) accounts, US ACH/wire receiving details, international cards accepted in 180+ countries, interbank-rate FX conversion, bulk supplier and contractor payouts, corporate cards with spend controls, and investment and credit products. It reports roughly two million users and is backed by Sequoia Capital, Founders Fund, Brevan Howard Digital, Y Combinator and Kaszek. DolarApp/ARQ runs a private API host at api.dolarapp.com for its own mobile and web applications but publishes no public developer program, documentation or machine-readable specification.
 
-**No public developer program.** `api.dolarapp.com` is a private application backend that answers
-every anonymous request — including `/openapi.json` and `/.well-known/*` — with HTTP 403. No docs
-host resolves, and the site map carries no `/developers`, `/docs` or `/api` path in any locale. The
-only anonymous machine-readable surface is the Atlassian Statuspage v2 JSON at
-`https://status.dolarapp.com/api/v2/`.
+**Areas:** Company · Fintech · Payments · Cross-Border Payments · Banking · Digital Dollars · Stablecoins · Foreign Exchange · Corporate Cards · Latin America
 
-- Website: https://www.arqfinance.com/
-- Business: https://www.arqfinance.com/en-MX/business
-- Status: https://status.dolarapp.com/
-- Responsible disclosure: https://www.arqfinance.com/en-MX/responsible-disclosure-policy
+## DolarApp on APIs.io
+
+Everything profiled for DolarApp is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dolarapp/](https://apis.io/providers/dolarapp/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [DolarApp Status API](https://apis.io/apis/dolarapp/dolarapp-status-api/) — Public, unauthenticated Atlassian Statuspage v2 JSON API served on DolarApp's own status host. Exposes overall status, the ten monitored components (sign…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Dolarapp Domain Security](https://apis.io/security/dolarapp/dolarapp-domain-security/)
+- [Dolarapp Vulnerability Disclosure](https://apis.io/security/dolarapp/dolarapp-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Dolarapp Plans Pricing](https://apis.io/plans/dolarapp/dolarapp-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Dolarapp Rate Limits](https://apis.io/rate-limits/dolarapp/dolarapp-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.arqfinance.com/)
+- [Sign up](https://business.arqfinance.com/sign-up)
+- [Support](https://help.arqfinance.com/en)
+- [Blog](https://www.arqfinance.com/en-MX/blog)
+- [Security](https://www.arqfinance.com/en-MX/responsible-disclosure-policy)
+- [Terms of service](https://www.arqfinance.com/en-MX/legal)
+- [Privacy policy](https://www.arqfinance.com/en-MX/legal/privacy-policy)
+- [GitHub](https://github.com/dolarapp)
+- [Status](https://status.dolarapp.com/)
+
+## API Evangelist rating
+
+**Kin Score 17.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 27.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.9** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dolarapp/](https://apis.io/providers/dolarapp/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DolarApp: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dolarapp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
